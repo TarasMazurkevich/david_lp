@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		title David-landing-page
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+		//- style links ----------
+			//- local
+		link(rel='stylesheet' href='css/main.css')
+			//- CDN
+				//- bootstrap
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+
+		<!--[if lt IE 9]>
+			script(src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js")
+			script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+			script(src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js")
+		<![endif]-->
+
+	body
+		//- preloader
+		.loaderArea
+			.loader
+				h2 david
+				p loading 
+					span.loader_dot .
+					span .
+					span .
+
+		//- includes
+			//- header block
+				//- header-menu
+		//- include src/menu.pug
+				//- header-article
+		//- include src/hero.pug
+
+
+
+
+		//- script links ----------
+			//- jQuery
+		script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+			//- CDN
+				//- js
+					//- fontawesome
+		script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+					//- bootstrap
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+			//- local
+		script(src='js/main.js')
