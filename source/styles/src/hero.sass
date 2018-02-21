@@ -1,0 +1,142 @@
+.head__bottom
+	background-image: url('../img/head-bottom-bg.png')
+	background-repeat: no-repeat
+	background-size: 100%
+	overflow: hidden
+
+	@media only screen and (min-width: 576px) and (max-width: 767px)
+		background-size: auto
+
+	@media only screen and (max-width: 576px)
+		background-size: auto
+
+.head__article
+	display: grid
+	grid-template-columns: 1fr 1fr
+
+	height: 600px
+
+	@media only screen and (min-width: 992px) and (max-width: 1200px)
+		height: 400px
+
+	@media only screen and (min-width: 768px) and (max-width: 991px)
+		height: 340px
+
+	@media only screen and (min-width: 576px) and (max-width: 767px)
+		height: 300px
+		grid-template-columns: none
+
+	@media only screen and (max-width: 576px)
+		height: 300px
+		grid-template-columns: none
+
+.head__block
+	display: grid
+	grid-template-rows: repeat(3, auto)
+	align-content: space-between
+	align-self: center
+
+	height: 400px
+
+	@media only screen and (min-width: 992px) and (max-width: 1200px)
+		height: 200px
+		align-content: center
+
+	@media only screen and (min-width: 768px) and (max-width: 991px)
+		height: 200px
+		align-content: center
+
+	@media only screen and (min-width: 576px) and (max-width: 767px)
+		height: 200px
+		align-content: center
+		text-align: center
+
+	@media only screen and (max-width: 576px)
+		height: 200px
+		align-content: center
+		text-align: center
+
+.head_title
+	+editText($green, 23px, bold, uppercase)
+
+	@media only screen and (min-width: 768px) and (max-width: 991px)
+		font-size: 18px
+
+	@media only screen and (min-width: 576px) and (max-width: 767px)
+		font-size: 18px
+
+	@media only screen and (max-width: 576px)
+		font-size: 16px
+
+.head__content
+	display: grid
+	grid-template-rows: auto auto
+	grid-row-gap: 20px
+	
+	color: $dark
+	font-size: 19px
+	line-height: 26.5px
+
+	@media only screen and (min-width: 768px) and (max-width: 991px)
+		margin: 0
+		padding: 0
+		grid-row-gap: 0
+		font-size: 14px
+
+	@media only screen and (min-width: 576px) and (max-width: 767px)
+		margin: 0
+		padding: 0
+		grid-row-gap: 0
+		font-size: 14px
+
+	@media only screen and (max-width: 576px)
+		margin: 0
+		padding: 0
+		grid-row-gap: 0
+		font-size: 12px
+
+.head__btn-group
+	.btn
+		+editText($white, 12px, normal, uppercase)
+		display: inline-grid
+		align-content: center
+		height: 50px
+		background-color: $green
+
+		@media only screen and (min-width: 768px) and (max-width: 991px)
+			height: 30px
+			font-size: 10px
+
+		@media only screen and (min-width: 576px) and (max-width: 767px)
+			height: 30px
+			font-size: 10px
+
+		@media only screen and (max-width: 576px)
+			height: 30px
+			font-size: 6px
+
+		&:first-child
+			width: 175px
+
+			@media only screen and (min-width: 768px) and (max-width: 991px)
+				width: 120px
+
+			@media only screen and (max-width: 576px)
+				width: 70px
+
+		&:last-child
+			margin-left: 35px
+			width: 250px
+
+			@media only screen and (min-width: 768px) and (max-width: 991px)
+				margin-left: 10px
+				width: 200px
+
+			@media only screen and (max-width: 576px)
+				margin-left: 2px
+				width: 120px
+		
+		&:hover
+			+editText($green, none, normal, uppercase)
+			background-color: transparent
+			border: 2px solid $green

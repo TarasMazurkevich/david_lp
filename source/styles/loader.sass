@@ -1,23 +1,44 @@
+@keyframes dotBounce
+	0%
+		transform: translateY(0)
+	25%
+		transform: translateY(-15px)
+	50%
+		transform: translateY(-30px)
+	75%
+		transform: translateY(-15px)
+	100%
+		transform: translateY(0)
+
 .loaderArea
-	display: flex
+	display: none
 	width: 100vw
 	height: 100vh
 
-	background-color: #55B95E
+	background-color: $green
 
-	color: #fff
+	color: $white
 
 .loader
 	margin: auto
 
-	h2
+	&_title
 		font-size: 150px
 		text-transform: uppercase
 
-	p
+	&_text
 		padding-left: 10px
 		font-size: 50px
-		font-weight: bold
 
-	span:not(.first-dot)
+	&_dot:not(.first-dot)
 		margin-left: 10px
+
+	&_dot
+		animation-name: dotBounce
+		animation-duration: 3s
+		animation-iteration-count: infinite
+	
+	&_dot:nth-child(2)
+		animation-delay: 1s
+	&_dot:last-child
+		animation-delay: 2s

@@ -18,22 +18,27 @@ html(lang="en")
 			script(src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js")
 		<![endif]-->
 
-	body
+	body.clear
+
 		//- preloader
 		.loaderArea
 			.loader
-				h2 david
-				p loading 
+				h2.clear.loader_title david
+				p.clear.loader_text loading 
+					span.loader_dot.first-dot .
 					span.loader_dot .
-					span .
-					span .
+					span.loader_dot .
 
-		//- includes
-			//- header block
-				//- header-menu
-		//- include src/menu.pug
-				//- header-article
-		//- include src/hero.pug
+
+
+
+		//- include ----------
+		
+		header.head
+			//- header-menu
+			include src/menu.pug
+			//- header-article
+			include src/hero.pug
 
 
 

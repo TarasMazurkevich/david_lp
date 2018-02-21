@@ -1,0 +1,15 @@
+// variables
+$green: #55B95E
+$white: #fff
+$dark: #4e4e4e
+
+.letterUp::first-letter
+	text-transform: uppercase
+
+// mixins
+
+=editText($color, $size, $weight, $transform)
+	color: $color
+	font-size: $size
+	font-weight: $weight
+	text-transform: $transform
