@@ -13,6 +13,11 @@ ul, li
 	@extend .clear
 	list-style-type: none
 
+// delete bootstrap border after click...
+.btn:focus, .btn:active
+  outline: none !important
+  box-shadow: none !important
+
 
 // Import ----------
 
@@ -26,3 +31,5 @@ ul, li
 @import src/menu
 // header article
 @import src/hero
+// section what
+@import src/what
