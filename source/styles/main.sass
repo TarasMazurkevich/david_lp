@@ -1,11 +1,24 @@
 // Set main fonts
+// regular
 @font-face
-	font-family: "fregatFonts"
-		src: url("../fonts/Fregat_regular.otf"), url("../fonts/Fregat_italic.otf"), url("../fonts/Fregat_bold.otf"), url("../fonts/Fregat_bold_italic.otf")
+	font-family: "fregat_regular"
+		src: url("../fonts/Fregat_regular.otf")
+// italic
+@font-face
+	font-family: "fregat_italic"
+		src: url("../fonts/Fregat_italic.otf")
+// bold
+@font-face
+	font-family: "fregat_bold"
+		src: url("../fonts/Fregat_bold.otf")
+// bold-italic
+@font-face
+	font-family: "fregat_bold_italic"
+		src: url("../fonts/Fregat_bold_italic.otf")
 
 // Set default values
 .clear, html
-	font-family: "fregatFonts", Arial, Roboto
+	font-family: "fregat_regular", Arial, Roboto
 	margin: 0
 	padding: 0
 
@@ -33,3 +46,5 @@ ul, li
 @import src/hero
 // section what
 @import src/what
+// section info
+@import src/info
