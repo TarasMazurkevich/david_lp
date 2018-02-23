@@ -20,12 +20,18 @@ section.callback
 			form.geolocal__form
 				p.clear.letterUp заполните форму и мы свяжемся с вами, ответим на все вопросы или запишем на прием к доктору
 				.input-block
-					label.clear.letterUp отделение
-					input(type="text")
+					label(class="clear letterUp" for="inputState") отделение
+					.select-wrapper
+						select(id="inputState" class="form-control")
+							option.disabled Выберите удобное для вас отделение
+							option ...
+							option ...
+						span.fas.fa-angle-down.select-down
+						span.fas.fa-angle-up.select-up
 				.input-block
 					label.clear.letterUp имя
-					input(type="text" placeholder=" Имя")
+					input(type="text" placeholder="Имя" class="form-control")
 				.input-block
 					label.clear.letterUp телефон
-					input(type="tel" placeholder=" +380")
+					input(type="tel" placeholder="+380" class="form-control")
 				button(type="submit" class='btn') отправить заявку
