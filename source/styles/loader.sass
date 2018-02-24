@@ -11,7 +11,7 @@
 		transform: translateY(0)
 
 .loaderArea
-	display: none
+	display: flex
 	width: 100vw
 	height: 100vh
 
@@ -20,15 +20,22 @@
 	color: $white
 
 .loader
+	display: block
 	margin: auto
 
 	&_title
 		font-size: 150px
 		text-transform: uppercase
 
+		@media only screen and (max-width: 576px)
+			font-size: 100px
+
 	&_text
 		padding-left: 10px
 		font-size: 50px
+
+		@media only screen and (max-width: 576px)
+			font-size: 30px
 
 	&_dot:not(.first-dot)
 		margin-left: 10px

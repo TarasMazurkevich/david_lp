@@ -2,15 +2,29 @@ section.head__top
 	.container
 		header.head__header
 			h1.clear.logo david
-			span.fas.fa-bars.btn-burger
-			span.btn-slose
+			.burger
+				span.fas.fa-bars#burger
+			.closed-burger
+				span.fas.fa-times#closed-burger
 			nav.navbar
 				ul.clear.menu
 					li.clear.menu_li 
-						a(href="#" class="menu_link") что входит в программу
+						a(href="#what" data-target="anchor" class="menu_link") что входит в программу
 					li.clear.menu_li
-						a(href="#" class="menu_link") почему сидеть вредно
+						a(href="#info" data-target="anchor" class="menu_link") почему сидеть вредно
 					li.clear.menu_li
-						a(href="#" class="menu_link") в каких случаях программа будет полезной
+						a(href="#callback" data-target="anchor" class="menu_link") записаться на прием
+		header.head__header
+			h1.clear.logo david
+			.burger
+				span.fas.fa-bars#burger
+			.closed-burger
+				span.fas.fa-times#closed-burger
+			nav.navbar
+				ul.clear.menu
+					li.clear.menu_li 
+						a(href="#what" data-target="anchor" class="menu_link") что входит в программу
 					li.clear.menu_li
-						a(href="#" class="menu_link") как работает методика david
+						a(href="#info" data-target="anchor" class="menu_link") почему сидеть вредно
+					li.clear.menu_li
+						a(href="#callback" data-target="anchor" class="menu_link") записаться на прием

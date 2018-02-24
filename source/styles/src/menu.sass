@@ -1,40 +1,63 @@
+.head-top-fixed
+	@media only screen and (min-width: 576px) and (max-width: 767px)
+		display: block
+		z-index: 100
+		position: fixed
+		width: 100%
+		background-color: $white
+
+	@media only screen and (max-width: 576px)
+		display: block
+		z-index: 100
+		position: fixed
+		width: 100%
+		background-color: $white
+
+.head__header:last-of-type
+	display: none
+
+	@media only screen and (min-width: 576px) and (max-width: 767px)
+		display: none
+
+	@media only screen and (max-width: 576px)
+		display: none
+
 // bureger and slose
-.btn-burger
+.burger
 	display: none
 	
 	@media only screen and (min-width: 576px) and (max-width: 767px)
 		display: block
-		-ms-grid-row-align: end
+		grid-row: 1/2
+		grid-column: 2/3
 		justify-self: end
-		-ms-grid-column-align: center
 		align-self: center
 		margin-right: 5%
 
 	@media only screen and (max-width: 576px)
 		display: block
-		-ms-grid-row-align: end
+		grid-row: 1/2
+		grid-column: 2/3
 		justify-self: end
-		-ms-grid-column-align: center
 		align-self: center
 		margin-right: 5%
 
-.btn-slose
+.closed-burger
 	display: none
 
 	@media only screen and (min-width: 576px) and (max-width: 767px)
-		-ms-grid-row-align: end
 		justify-self: end
-		-ms-grid-column-align: center
+		grid-row: 1/2
+		grid-column: 2/3
 		align-self: center
 		margin-right: 5%
 
 	@media only screen and (max-width: 576px)
-		-ms-grid-row-align: end
 		justify-self: end
-		-ms-grid-column-align: center
+		grid-row: 1/2
+		grid-column: 2/3
 		align-self: center
 		margin-right: 5%
-
 
 // section
 .head__header

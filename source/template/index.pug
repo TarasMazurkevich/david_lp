@@ -6,7 +6,7 @@ html(lang="en")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 
 		//- website-icon
-		link(rel="shortcut icon" href="img/ico/favicon.ico" type="image/png")
+		link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
 
 		//- style links ----------
 			//- local
@@ -32,11 +32,12 @@ html(lang="en")
 					span.loader_dot .
 					span.loader_dot .
 
-
-
+		//- back to top
+		a.btn-top
+			span(class="fa fa-angle-up fa-2x" aria-hidden="true")
 
 		//- include ----------
-		
+				
 		header.head
 			//- header-menu
 			include src/menu.pug

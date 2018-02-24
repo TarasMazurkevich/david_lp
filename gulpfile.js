@@ -70,6 +70,7 @@ gulp.task('style:build', function () {
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(prefixer())
+        .pipe(cssmin())
         .pipe(gulp.dest(path.build.css))
         .pipe(browserSync.reload({stream: true}));
 });
