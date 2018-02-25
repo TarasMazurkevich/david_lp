@@ -1,8 +1,12 @@
 .head-top-fixed
+	display: none
+
 	@media only screen and (min-width: 576px) and (max-width: 767px)
 		display: block
 		z-index: 100
 		position: fixed
+		top: 0
+		left: 0
 		width: 100%
 		background-color: $white
 
@@ -10,10 +14,12 @@
 		display: block
 		z-index: 100
 		position: fixed
+		top: 0
+		left: 0
 		width: 100%
 		background-color: $white
 
-.head__header:last-of-type
+.head__top-clone
 	display: none
 
 	@media only screen and (min-width: 576px) and (max-width: 767px)
@@ -23,7 +29,7 @@
 		display: none
 
 // bureger and slose
-.burger
+.burger, .burger-clone 
 	display: none
 	
 	@media only screen and (min-width: 576px) and (max-width: 767px)
@@ -42,7 +48,7 @@
 		align-self: center
 		margin-right: 5%
 
-.closed-burger
+.closed-burger, .closed-burger-clone
 	display: none
 
 	@media only screen and (min-width: 576px) and (max-width: 767px)
@@ -91,6 +97,17 @@
 		font-weight: bold
 		text-transform: uppercase
 
+		transform: translate(0, -2000px)
+
+		animation-name: logo
+		animation-delay: 2s
+		animation-duration: 2s
+		animation-iteration-count: 1
+		animation-fill-mode: forwards
+
+		transition-property: all
+		transition-duration: 5s
+
 		@media only screen and (min-width: 992px) and (max-width: 1200px)
 			font-size: 40px
 
@@ -103,17 +120,34 @@
 			margin-left: 5%
 			font-size: 30px
 
+			transform: translate(0, 0)
+			animation: none
+
 		@media only screen and (max-width: 576px)
 			-ms-grid-row-align: start
 			justify-self: start
 			margin-left: 5%
 			font-size: 30px
 
-	.navbar
+			transform: translate(0, 0)
+			animation: none
+
+	.navbar, .navbar-clone
 		display: -ms-grid
 		display: grid
 		justify-content: end
 		padding: 0
+
+		transform: translate(2000px, 0)
+
+		animation-name: menu
+		animation-delay: 2s
+		animation-duration: 3s
+		animation-iteration-count: 1
+		animation-fill-mode: forwards
+
+		transition-property: all
+		transition-duration: 5s
 
 		@media only screen and (min-width: 576px) and (max-width: 767px)
 			display: none
@@ -122,12 +156,18 @@
 			justify-content: center
 			margin: 20px 0
 
+			transform: translate(0, 0)
+			animation: none
+
 		@media only screen and (max-width: 576px)
 			display: none
 			-ms-grid-column: 1/3
 			grid-column: 1/3
 			justify-content: center
 			margin: 20px 0
+
+			transform: translate(0, 0)
+			animation: none
 
 .menu
 	display: -ms-grid

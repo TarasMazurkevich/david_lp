@@ -6,17 +6,17 @@ section.what#what
 
 		article.what__article
 			.sliderArea
-				a(class="prev")
+				a(class="prev" onclick="plusSlides(-1)")
 					span(class="fas fa-angle-left fa-lg" aria-hidden="true")
 				.slider
 					img(class="slide" src="img/slide.png", alt="First")
-					img(class="slide" src="img/slide.png", alt="Secind")
-					img(class="slide" src="img/slide.png", alt="Third")
+					img(class="slide" src="img/slide2.jpg", alt="Second")
+					img(class="slide" src="img/slide3.jpg", alt="Third")
 					.slide-pagination
-						span.slide-dot.dot-active 
-						span.slide-dot 
-						span.slide-dot 
-				a(class="next")
+						span(class="slide-dot dot-active" onclick="currentSlide(1)") 
+						span(class="slide-dot" onclick="currentSlide(2)")
+						span(class="slide-dot" onclick="currentSlide(3)")
+				a(class="next" onclick="plusSlides(1)")
 					span(class="fas fa-angle-right fa-lg" aria-hidden="true")
 			ul
 				.what__block

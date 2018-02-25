@@ -82,6 +82,23 @@
 	&__block
 		display: grid
 
+		opacity: 0
+
+		animation-duration: 1s
+		animation-iteration-count: 7
+		animation-fill-mode: forwards
+
+		transition-property: all
+		transition-duration: 3s
+
+		@media only screen and (min-width: 576px) and (max-width: 767px)
+			opacity: 1
+			animation: none
+
+		@media only screen and (max-width: 576px)
+			opacity: 1
+			animation: none
+
 	&__block:first-of-type
 		.info__block_count
 			+infoIcon('../img/info-icon1.png', center, contain, no-repeat)

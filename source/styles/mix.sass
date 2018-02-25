@@ -7,7 +7,6 @@ $dark: #4e4e4e
 	text-transform: uppercase
 
 // mixins
-
 =editText($color, $size, $weight, $transform)
 	color: $color
 	font-size: $size
@@ -19,3 +18,36 @@ $dark: #4e4e4e
 	background-position: $position
 	background-size: $size
 	background-repeat: $repeat
+
+// animation
+@keyframes counter
+	0%
+		opacity: 1
+	50%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes logo
+	0%
+		transform: translate(0, -2000px)
+	100%
+		transform: translate(0, 0)
+
+@keyframes menu
+	0%
+		transform: translate(2000px, 0)
+	100%
+		transform: translate(0, 0)
+
+@keyframes whatHeader
+	0%
+		transform: translate(-2000px, 0)
+	100%
+		transform: translate(0, 0)
+
+@keyframes whatList
+	0%
+		opacity: 0
+	100%
+		opacity: 1

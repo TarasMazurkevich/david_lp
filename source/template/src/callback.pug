@@ -17,12 +17,15 @@ section.callback#callback
 					p.clear.letterUp.geolocal_city львов
 					p.clear.letterUp.geolocal_address ул. кульпарковская
 					p.clear.letterUp.geolocal_phone (032) 254-03-46
-			form.geolocal__form
+			form(id="form" class="geolocal__form")
+				input(type="hidden" name="website_name" value="david.com")
+				input(type="hidden" name="admin_email" value="tartitan1999@gmail.com")
+				input(type="hidden" name="form_subject" value="Заявка с нижней формы")
 				p.clear.letterUp заполните форму и мы свяжемся с вами, ответим на все вопросы или запишем на прием к доктору
 				.input-block
 					label(class="clear letterUp" for="inputState") отделение
 					.select-wrapper
-						select(id="inputState" class="form-control")
+						select(id="inputState" name="select" class="form-control")
 							option.disabled Выберите удобное для вас отделение
 							option ...
 							option ...
@@ -30,8 +33,8 @@ section.callback#callback
 						span.fas.fa-angle-up.select-up
 				.input-block
 					label.clear.letterUp имя
-					input(type="text" placeholder="Имя" class="form-control")
+					input(type="text" name="name" placeholder="Имя" class="form-control" required)
 				.input-block
 					label.clear.letterUp телефон
-					input(type="tel" placeholder="+380" class="form-control")
+					input(type="tel" name="phone" placeholder="+380" class="form-control" required)
 				button(type="submit" class='btn') отправить заявку
