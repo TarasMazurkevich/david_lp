@@ -25,8 +25,8 @@ $('.burger').on('click', function (){
 	var burger = $('.burger'),
 		closeBurger = $('.closed-burger'),
 		menuMobile = $('.navbar');
-	burger.css({'display': 'none'});
-	closeBurger.css({'display' : 'block'});
+	burger.fadeToggle();
+	closeBurger.fadeToggle();
 	menuMobile.slideDown('slow');
 });
 
@@ -34,8 +34,8 @@ $('.closed-burger').on('click', function (){
 	var burger = $('.burger'),
 		closeBurger = $('.closed-burger'),
 		menuMobile = $('.navbar');
-	closeBurger.css({'display' : 'none'});
-	burger.css({'display': 'block'});
+	closeBurger.fadeToggle();
+	burger.fadeToggle();
 	menuMobile.slideUp('slow');
 });
 
@@ -51,8 +51,8 @@ $('a[data-target^="anchor"]').bind('click.smoothscroll', function(){
 
 	$('html, body').animate({scrollTop: destination - 50}, 1000);
 	if(menuMobile.css({'display':'block'})){
-		closeBurger.css({'display' : 'none'});
-		burger.css({'display': 'block'});
+		closeBurger.fadeToggle();
+		burger.fadeToggle();
 		menuMobile.slideUp();
 	};
 	return false;
@@ -130,7 +130,7 @@ $(window).on('scroll', function(){
 
 // -------------------------------------------------------------
 
-// 6) Parallax-effect
+// 6) ----- Parallax-effect
 $(window).on('scroll', function(){
 	var sp = $(this).scrollTop();
 	$('.head__bottom').css({'background-position-y': sp / 3 + 'px'});
@@ -158,7 +158,7 @@ btnTop.on('click', function(){
 
 // -------------------------------------------------------------
 
-// 8) Mail-form
+// 8) ----- Mail-form
 $(document).ready(function() {
 	$("#form").submit(function() {
 		$.ajax({
@@ -173,11 +173,15 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+	$('#inputState').on('click', function(){
+		$('.select-down').fadeToggle();
+		$('.select-up').fadeToggle();
+	});
 });
 
 // -------------------------------------------------------------
 
-// 9) Animate
+// 9) ----- Animate
 $(window).on('scroll', function(){
 	var whatHeader = $('.what__header'),
 		whatList = $('.what__block'),

@@ -80,7 +80,7 @@ gulp.task('style:build', function () {
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write())
-        .pipe(prefixer())
+        .pipe(prefixer({ grid: true }))
         .pipe(cssmin())
         .pipe(gulp.dest(path.build.css))
         .pipe(browserSync.reload({stream: true}));
