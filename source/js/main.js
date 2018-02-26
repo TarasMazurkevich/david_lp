@@ -34,9 +34,27 @@ $('.closed-burger').on('click', function (){
 	var burger = $('.burger'),
 		closeBurger = $('.closed-burger'),
 		menuMobile = $('.navbar');
-	closeBurger.fadeToggle();
 	burger.fadeToggle();
+	closeBurger.fadeToggle();
 	menuMobile.slideUp('slow');
+});
+
+$('.burger-clone').on('click', function (){
+	var burgerClone = $('.burger-clone'),
+		closeBurgerClone = $('.closed-burger-clone'),
+		menuMobileClone = $('.navbar-clone');
+	burgerClone.fadeToggle();
+	closeBurgerClone.fadeToggle();
+	menuMobileClone.slideDown('slow');
+});
+
+$('.closed-burger-clone').on('click', function (){
+	var burgerClone = $('.burger-clone'),
+		closeBurgerClone = $('.closed-burger-clone'),
+		menuMobileClone = $('.navbar-clone');
+	burgerClone.fadeToggle();
+	closeBurgerClone.fadeToggle();
+	menuMobileClone.slideUp('slow');
 });
 
 // -------------------------------------------------------------
@@ -45,15 +63,16 @@ $('.closed-burger').on('click', function (){
 $('a[data-target^="anchor"]').bind('click.smoothscroll', function(){
 	var elementClick = $(this).attr('href'),
 		destination = $(elementClick).offset().top,
-		burger = $('.burger-clone'),
-		closeBurger = $('.closed-burger-clone'),
-		menuMobile = $('.navbar-clone');
+		burgerClone = $('.burger-clone'),
+		closeBurgerClone = $('.closed-burger-clone'),
+		menuMobileClone = $('.navbar-clone');
 
 	$('html, body').animate({scrollTop: destination - 50}, 1000);
-	if(menuMobile.css({'display':'block'})){
-		closeBurger.fadeToggle();
-		burger.fadeToggle();
-		menuMobile.slideUp();
+	
+	if(menuMobileClone.css({'display':'block'})){
+		closeBurgerClone.css({'display':'none'});
+		burgerClone.css({'display':'block'});
+		menuMobileClone.slideUp();
 	};
 	return false;
 });
